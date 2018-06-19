@@ -1,15 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Crystal Collector</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="assets\css\style.css" />
     <link rel="resetsheet" href="assets\css\reset.css">
     <script src="main.js"></script>
 </head>
+
 <body>
-    
+    <!-- Game Title -->
+    <div class="jumbotron">
+        <h1 class="text-center">Crystal Collector!</h1>
+        <h3 class="text-center">Clicking Crystals has never been so fun!</h3>
+    </div>
+    <!-- Instructions -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6" id="Instructions">
+                <h3>Object of the game:</h3>
+                <br>
+                <p>
+                    A random number will generate at the start of the game. Using the four gems pictured below, click on the images to increase
+                    your score until it matches the random number.
+                </p>
+                <p>
+                    Each crystal may add a different amount to your total score. The value of each crystal is hidden so choose wisely.
+                </p>
+                <p>
+                    Once your score matches the random number, you win! But be careful, if your total score exceeds the random number, you lose!
+                </p>
+                <p>
+                    Each time the game starts, a new set of values will be assigned to each crystal.
+                </p>
+            </div>
+        </div>
+        <!-- Random Number -->
+        <div class="row">
+            <div class="col-md-4" id="numberToMatch">
+                <p>Match this number:
+                    <span id="randomNumber"></span>
+                </p>
+            </div>
+            <!-- Wins and Losses -->
+            <div class="col-md-2" id="winsAndLosses">
+                <p>
+                    Wins:
+                    <span id="numberWins"></span>
+                    <br> Loses:
+                    <span id="numberLosses"></span>
+                </p>
+            </div>
+        </div>
+        <!-- crystals -->
+        <div class="gems">
+            <div class="col-md-6">
+                <img src="assets\images\Blue Crystal.PNG" class=gemImage id="one" alt="Blue Crystal">
+                <img src="assets\images\Green Crystal.PNG" class=gemImage id="two" alt="Green Crystal">
+                <img src="assets\images\Pink Crystal.PNG" class=gemImage id="three" alt="Pink Crystal">
+                <img src="assets\images\Yellow Crystal.PNG" class=gemImage id="four" alt="Yellow Crystal">
+            </div>
+        </div>
+        <!-- Your Total Score is: -->
+        <br>
+
+        <div class="row" id="userTotal">
+            <p>Your Total Score:</p>
+            <span id="finalTotal"></span>
+
+        </div>
+
+        <!-- Score starts at 0 and is increased with every gem selection -->
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets\javascript\game.js"></script>
+
 </body>
+
 </html>
+
+<!-- ============================================================================================ -->
