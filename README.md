@@ -1,4 +1,4 @@
-Crystal Collector
+Crystal Collector: https://riggs041.github.io/unit-4-game/
 
 Object of the game:
 A random number will generate at the start of the game. 
